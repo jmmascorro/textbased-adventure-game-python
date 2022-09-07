@@ -33,8 +33,18 @@ def trek():
     answer = (input("Should we continue to the other side or turn back? (continue/back): ")).lower()
     if answer == "continue":
         print("Dorian: Okay, let's carefully pace ourseslves off this ice.")
+        print("Dorian safely makes across the lake and is able to set foot on land.")
         print("You almost make it to the end of the lake when you the ice underneath you begins breaking apart.")
-        print("")
+        if ("rope" in player1.inventory):
+            print("You remember that you grabbed rope on your way out of he space-craft and quickly toss the rope to Dorian.")
+            print("He quickly grabs it and pulls you out of the lake and you escape from falling into the freezing lake.")
+        else:
+            print("The ice completely breaks froms underneath your feet and you drop down into the freezing lake.")
+            print("Dorian manages to safely make his way back to you and after several extruciating minutes he is able to pull you out to land.")
+            player1.turns = player1.turns - 2
+            print("Life = ", player1.turns)
+    elif answer == "back":
+        
 
 def shelter():
     print("Dorian: Okay, I might of seen a cave on my way here from where I crashed.")
@@ -91,6 +101,7 @@ def main():
         print("you equip", player1.inventory)
     else: 
         print("Dorian: Okay, let me cut you out and let's get off this death trap!")
+        print("You struggle to become free from the belt for longer than you'd like and don't have time to grab anything before your exit from the space-craft. ")
     print("")
 
     print("After finally departing the space-craft, you find yourself standing on what appears to be the top of a moutain blanketed in snow.")
