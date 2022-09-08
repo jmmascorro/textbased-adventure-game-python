@@ -5,11 +5,11 @@ import pandas as pd
 logging.basicConfig(filename="logfile.log", level=logging.DEBUG)
 
 class Player:
-    def __init__(self, name="", turns=5, inventory=[], bleeding=False):
+    def __init__(self, name="", turns=5, inventory=[], is_bleeding=False):
         self._name = name
         self.turns = turns
         self.inventory = inventory
-        self.bleeding = bleeding
+        self.is_bleeding = is_bleeding
     
     @property
     def get_Name(self):  
@@ -22,7 +22,7 @@ player1 = Player()
 required = "Choose only a or b"
 
 def theFire():
-    if player1.bleeding == True:
+    if player1.is_bleeding == True:
         player1.turns = player1.turns - 1  
         print("You've been slowly bleeding from the wolf-like creature wound. Life = ", player1.turns)
         logging.info("Player has been bleeding from wound and loses 1 life")
@@ -153,7 +153,7 @@ def shelter():
             print("Dorian takes out pistol and blows two bullets into one of the creatures as the other leaps toward you knocking you to the ground.")
             print("You lay on the ground bleeding as Dorian blasts two bullets through the beast.")
             time.sleep(2)
-            player1.bleeding = True
+            player1.is_bleeding = True
             player1.turns = player1.turns - 1
             print("Life = ", player1.turns)
             logging.info("Player doesn't have pistol and cant defend from wolf-like creatures and pays 1 life")
