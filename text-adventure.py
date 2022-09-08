@@ -1,5 +1,6 @@
 import logging
 import time
+import pandas as pd 
 
 logging.basicConfig(filename="logfile.log", level=logging.DEBUG)
 
@@ -254,5 +255,9 @@ def main():
     canYouShoot()
     gettingLate()
     theFire()
-
+    df = pd.read_csv ('logfile.log')
+    df.to_csv('logfile.csv')
 main()
+
+
+
