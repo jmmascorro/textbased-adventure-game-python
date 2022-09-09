@@ -257,7 +257,7 @@ def main():
     theFire()
     df = pd.read_csv ('logfile.log')
     df.to_csv('logfile.csv')
-main()
+# main()
 
 
 
