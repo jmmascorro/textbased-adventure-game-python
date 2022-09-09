@@ -23,7 +23,9 @@ Once the the vagrant up command is completed you can then run the command: vagra
 
 This will SSH into the running Vagrant machine and give you access to a shell.
 Then you will run the command: cd app
+
 This will move into the app directory where the adventure game application lives.
+
 Then you will run the command: python3 text_adventure.py
 
 This final command will begin the apllication and the adventure game will initiate and then the fun begins.
