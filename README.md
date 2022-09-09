@@ -17,6 +17,7 @@ Once you have those installed you can clone this repo to your computer in whatev
 
 Everything should be set up and ready for you to run a simple command to start your virtual machine.
 Open up the terminal to the repo path and run the command: vagrant up
+
 This will start up the virtual machine and the provisioning script.sh that is included should install and neccesary dependecies for your application to run.
 Once the the vagrant up command is completed you can then run the command: vagrant ssh
 
